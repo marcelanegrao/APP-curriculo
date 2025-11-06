@@ -9,8 +9,7 @@ const dadosCurriculo = {
   
   sobreMim: "Olá! Sou estudante de Análise e Desenvolvimento de Sistemas pelo SENAC, participante do programa Embarque Digital, com grande afinidade por desenvolvimento front-end e design. Me identifico com o desenvolvimento de interfaces modernas, acessíveis e funcionais, unindo estética e usabilidade para oferecer boas experiências ao usuário. Estou em constante evolução, buscando projetos que me desafiem e me permitam crescer na área, além de aprimorar meu olhar criativo e técnico. ✨",
 
-
-  fotoUrl: "https://placehold.co/200x200/007bff/fff.png?text=Marcela", 
+  fotoSource: require('./assets/fotocurriculo.jpg'),
   
   contato: {
     email: "marcelanegraosm@gmail.com",
@@ -136,7 +135,7 @@ const App: React.FC = () => {
       <View style={styles.header}>
         <Image
           style={styles.foto}
-          source={{ uri: dadosCurriculo.fotoUrl }}
+          source={dadosCurriculo.fotoSource}
         />
         <Text style={styles.nome}>{dadosCurriculo.nome}</Text>
         <Text style={styles.cargo}>{dadosCurriculo.cargo}</Text>
@@ -218,7 +217,7 @@ const styles = StyleSheet.create({
     borderRadius: 75,
     marginBottom: 10,
     borderWidth: 3,
-    borderColor: '#007bff',
+    borderColor: '#d03377',
   },
   nome: {
     fontSize: 24,
@@ -255,7 +254,7 @@ const styles = StyleSheet.create({
   },
   tituloSkills: {
 
-    color: '#3498db',
+    color: '#d03377',
     marginBottom: 5,
   },
   textoHabilidade: {
@@ -267,7 +266,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     paddingLeft: 5,
     borderLeftWidth: 3,
-    borderLeftColor: '#28a745', 
+    borderLeftColor: '#f39c12', 
   },
   tituloExperiencia: {
     fontSize: 16,
